@@ -1,0 +1,84 @@
+﻿
+.container {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+main {
+    display: flex;
+    height: 90vh;
+    border: 1px black solid;
+}
+.menu, .tasks{
+}
+.menu {
+    border-right: 1px solid black;
+    width: 33%;
+    overflow: auto;
+}
+
+.tasks {
+    text-align: center;
+    margin: 0 10px;
+    padding: 0 10px;
+    width: 66%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    align-items: center;
+}
+
+li > span {
+    margin-left: 20px;
+}
+li > img + span{
+    margin-left: 0;
+}
+.hidden {
+    display: none;
+}
+img {
+    transition: transform 0.3s;
+    width: 15px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+li>span{
+    cursor: pointer;
+}
+img.opened {
+
+    transform: rotate(90deg);
+}
+
+.status-indicator {
+    display: inline-block;
+    border-radius: 10px;
+    width: 10px;
+    height: 10px;
+    margin-left: 10px;
+}
+a{
+    background-color: red;
+    color: white;
+    border-radius: 20px;
+    padding: 1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin: 10px;
+}
+a:hover {
+    background-color: #da0000;
+}
+
+a#edit:hover {
+    background-color: darkorange;
+}
+a#edit{
+    background-color: orange;
+}
