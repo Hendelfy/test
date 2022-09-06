@@ -1,0 +1,15 @@
+version: '3.1'
+
+services:
+  postgres:
+    image: postgres:14.5
+    volumes:
+      - ./postgres/data:/var/lib/postgresql/data
+    ports:
+      - "3402:5432"
+    environment:
+      - POSTGRES_DB=document
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    command: postgres -c 'max_prepared_transactions=64' -c 'max_connections=64' -c 'shared_buffers=512MB'
+    restart: unless-stopped
